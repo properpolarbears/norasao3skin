@@ -503,3 +503,11 @@ li.blurb .tags {
   max-height: none;
   overflow: visible;
 }
+
+.index.group {
+  background-image: url("https://i.imgur.com/iYGM0qy.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
