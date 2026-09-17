@@ -1,4 +1,6 @@
-/* Nora — starting point combining Aero buttons/header + butterfly logo + no-tag-scroll styling */
+/* Nora skin: Aero controls and panels with butterfly-inspired header styling */
+
+/* ---------- 1. Base variables and typography ---------- */
 
 :root {
   --bottom-glow: radial-gradient(farthest-corner at bottom center, rgba(255,255,255,0.75), transparent);
@@ -28,6 +30,8 @@ button {
   background-position: center top;
   min-height: 100vh;
 }
+
+/* ---------- 2. Site background and header ---------- */
 
 #header {
   margin: 0 2em 2.5em;
@@ -80,7 +84,7 @@ button {
   box-shadow: none;
   padding-top: 30px;
   padding-bottom: 30px;
-  background-image: url("https://i.imgur.com/iYGM0qy.jpeg");
+  background-image: url("https://i.imgur.com/9Sf69du.jpeg");
   background-attachment: fixed;
   background-position: center 30px;
   background-size: cover;
@@ -91,6 +95,8 @@ button {
   display: table;
   border-radius: 25px;
 }
+
+/* ---------- 3. Shared Aero button styling ---------- */
 
 #header .actions a,
 #header .dropdown a.dropdown-toggle,
@@ -177,7 +183,7 @@ form.button_to button::after,
   transition: background 400ms;
 }
 
-/* hover styling */
+/* Button hover state */
 #header .actions a:hover,
 #header .dropdown:hover a.dropdown-toggle,
 #header .menu li a:hover,
@@ -202,7 +208,7 @@ a.tag:hover,
   color: #fff !important;
 }
 
-/* bubble buttons for tags */
+/* ---------- 4. Tag buttons ---------- */
 
 a.tag,
 .tags a,
@@ -263,7 +269,7 @@ li.freeforms a.tag:hover {
   color: #fff !important;
 }
 
-/* color variants */
+/* Tag color variants */
 li.warnings a.tag {
   --button-background: hsla(36, 80%, 75%, 0.8);
   --bg-dark: hsla(36, 51%, 65%, 0.75);
@@ -294,6 +300,8 @@ li.freeforms a.tag {
   background: #d7e0de !important;
   color: #59727c !important;
 }
+
+/* ---------- 5. Header, dashboard, and link details ---------- */
 
 #header a,
 #header a:visited,
@@ -352,7 +360,7 @@ a.cloud2 {
   border-bottom: none;
 }
 
-/* Butterly-style tag behavior: no overflow / no scroll */
+/* Tag layout: no overflow or scroll */
 ul.tags.commas,
 ul.tags {
   overflow: visible;
@@ -377,7 +385,9 @@ li.warnings {
   display: none !important;
 }
 
-/* optional softer default panel look */
+/* ---------- 6. Shared panel styling ---------- */
+
+/* Soft panel baseline */
 form dl,
 fieldset,
 fieldset fieldset,
@@ -409,7 +419,9 @@ li.comment,
   text-align: left;
 }
 
-/* Aero bookmark panel / beveled window styling */
+/* ---------- 7. Aero panels and bookmark cards ---------- */
+
+/* Aero panel bevel */
 form dl,
 fieldset,
 fieldset fieldset,
@@ -502,7 +514,7 @@ li.blurb::before {
   border-radius: 8px 8px 0px 0px;
 }
 
-/* no scroll on bookmark tags */
+/* Bookmark tags: no overflow or scroll */
 li.blurb .tags {
   max-height: none;
   overflow: visible;
@@ -520,6 +532,8 @@ li.blurb .tags {
   padding: 1.5em;
 }
 
+/* ---------- 8. Optional experiments and future additions ---------- */
+
 /* img.icon {
   border: 10px solid #4577EA;
   border-radius: 8px;
@@ -530,7 +544,7 @@ li.blurb .tags {
 } */
 
 /* .index.group {
-  background-image: url("https://i.imgur.com/iYGM0qy.jpeg");
+  background-image: url("https://i.imgur.com/YZFNDcD.jpeg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -538,7 +552,7 @@ li.blurb .tags {
 } */
 
 /* .own {
-  background-image: url("https://i.imgur.com/iYGM0qy.jpeg") !important;
+  background-image: url("https://i.imgur.com/YZFNDcD.jpeg") !important;
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
