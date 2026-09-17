@@ -317,3 +317,102 @@ li.comment,
   border-bottom: none;
   text-align: left;
 }
+
+/* Aero bookmark panel / beveled window styling */
+form dl,
+fieldset,
+fieldset fieldset,
+fieldset fieldset fieldset,
+fieldset fieldset dl dl,
+dd.hideme,
+form blockquote.userstuff,
+input,
+select,
+select:focus,
+textarea,
+span.symbol.question,
+thead,
+tfoot,
+tfoot td,
+th,
+tr:hover,
+col.name,
+input,
+textarea,
+#modal .content,
+.actions a,
+.action,
+.actions input,
+input[type="submit"],
+button,
+.current,
+.actions label,
+span.unread,
+.replied,
+span.claimed,
+.system .latest h3,
+.system div.news h3,
+.listbox,
+fieldset fieldset.listbox,
+dl.meta,
+.picture .header,
+.bookmark .user,
+li.comment,
+.thread .even {
+  --hue-primary: 180;
+  background: linear-gradient(to bottom, #D9F0F8D9 0%, #B9D6E4F2 100%);
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.6) inset,
+    0 -1px 2px rgba(255, 255, 255, 0.4) inset,
+    0 4px 12px hsla(203, 30%, 70%, 0.4),
+    0 2px 6px hsla(198, 20%, 60%, 0.3);
+  border-top: 1px solid hsla(200, 60%, 96%, 0.7);
+  border-left: 1px solid hsla(202, 40%, 85%, 0.8);
+  border-right: 1px solid hsla(203, 35%, 75%, 0.9);
+  border-bottom: 2px solid hsla(198, 35%, 75%, 0.9);
+  border-radius: 12px;
+  font-family: "Segoe UI Semilight", Tahoma, Geneva, Verdana, sans-serif, Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  color: hsla(200, 25%, 20%, 0.9);
+  position: relative;
+  margin: 0;
+  transition: all 0.3s ease;
+}
+
+li.blurb {
+  --hue-primary: 180;
+  background: linear-gradient(to bottom, #D9F0F8 0%, #B9D6E4 100%);
+  font-family: "Segoe UI Semilight", Tahoma, Geneva, Verdana, sans-serif, Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  color: hsla(200, 25%, 20%, 0.9);
+  position: relative;
+  margin: 15px;
+  transition: all 0.3s ease;
+  border-bottom: 10px solid #4577EA;
+  border-left: 10px solid #4577EA;
+  border-right: 10px solid #4577EA;
+  border-radius: 8px 8px 8px 8px;
+}
+
+li.blurb::before {
+  content: "archiveofourown.org";
+  display: block;
+  background: url("https://imgur.com/nyLnxZT.png") right 10px center no-repeat,
+    linear-gradient(180deg,#7DA4E9,#6B8FE8 8%,#6789E7 40%,#5580E6 88%,#5580E6 93%,#4E7CEB 95%,#4577EA 96%,#4577EA);
+  background-size: auto, auto, auto, cover;
+  color: white;
+  padding: 7px 20.5px 10px 20.5px;
+  text-align: left;
+  font-weight: normal;
+  font-family: "Segoe UI Semilight", Tahoma, Geneva, Verdana, sans-serif;
+  margin: -7px -20.5px 10px -20.5px;
+  box-sizing: border-box;
+  text-shadow: 1px 1px #263E26;
+  min-height: 30px;
+  border-radius: 8px 8px 0px 0px;
+}
+
+/* no scroll on bookmark tags */
+li.blurb .tags {
+  max-height: 7.5em;
+  overflow: visible;
+}
