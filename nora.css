@@ -173,6 +173,7 @@ form.button_to button::after,
   transition: background 400ms;
 }
 
+/* hover styling */
 #header .actions a:hover,
 #header .dropdown:hover a.dropdown-toggle,
 #header .menu li a:hover,
@@ -195,6 +196,92 @@ a.tag:hover,
   --button-foreground: hsl(55, 40%, 15%);
   transform: translateY(-1px);
   color: #fff !important;
+}
+
+/* bubble buttons for tags */
+
+a.tag,
+.tags a,
+li.warnings a.tag,
+li.relationships a.tag,
+li.characters a.tag,
+li.freeforms a.tag {
+  --button-background: hsla(200, 80%, 75%, 0.8);
+  --bg-dark: hsla(200, 45%, 60%, 0.76);
+  --button-foreground: hsl(200, 58%, 15%);
+  background-color: var(--button-background);
+  background: var(--bottom-glow), linear-gradient(to bottom, var(--bg-dark), var(--button-background));
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--button-background);
+  border-radius: 9999px;
+  cursor: pointer;
+  margin: 0.25em 0.5em 0.25em 0;
+  padding: 0.3em 0.8em;
+  font-size: 0.75rem;
+  position: relative;
+  text-shadow: 0 2px .5em #0003;
+  transition: all 300ms;
+  color: var(--button-foreground);
+  font-family: "Segoe UI Semilight", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 700;
+  display: inline-block;
+  text-decoration: none;
+  line-height: 1.2;
+}
+
+a.tag::after,
+.tags a::after,
+li.warnings a.tag::after,
+li.relationships a.tag::after,
+li.characters a.tag::after,
+li.freeforms a.tag::after {
+  content: "";
+  position: absolute;
+  top: 4%;
+  left: 0.5em;
+  right: 0.5em;
+  height: 40%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.08));
+  border-radius: 9999px;
+  transition: background 400ms;
+}
+
+a.tag:hover,
+.tags a:hover,
+li.warnings a.tag:hover,
+li.relationships a.tag:hover,
+li.characters a.tag:hover,
+li.freeforms a.tag:hover {
+  --button-background: hsla(158, 70%, 75%, 0.8);
+  --bg-dark: hsla(120, 30%, 65%, 0.75);
+  --button-foreground: hsl(55, 40%, 15%);
+  transform: translateY(-1px);
+  color: #fff !important;
+}
+
+/* color variants */
+li.warnings a.tag {
+  --button-background: hsla(36, 80%, 75%, 0.8);
+  --bg-dark: hsla(36, 51%, 65%, 0.75);
+  --button-foreground: hsl(36, 58%, 15%);
+}
+
+li.relationships a.tag {
+  --button-background: hsla(55, 80%, 75%, 0.8);
+  --bg-dark: hsla(55, 51%, 65%, 0.75);
+  --button-foreground: hsl(55, 58%, 15%);
+}
+
+li.characters a.tag {
+  --button-background: hsla(80, 80%, 75%, 0.8);
+  --bg-dark: hsla(80, 51%, 65%, 0.75);
+  --button-foreground: hsl(80, 58%, 15%);
+}
+
+li.freeforms a.tag {
+  --button-background: hsla(198, 80%, 75%, 0.8);
+  --bg-dark: hsla(198, 51%, 65%, 0.75);
+  --button-foreground: hsl(198, 58%, 15%);
 }
 
 #header #search .button:hover,
@@ -413,6 +500,6 @@ li.blurb::before {
 
 /* no scroll on bookmark tags */
 li.blurb .tags {
-  max-height: 7.5em;
+  max-height: none;
   overflow: visible;
 }
