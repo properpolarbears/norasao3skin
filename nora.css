@@ -23,7 +23,7 @@ button {
 }
 
 #outer {
-  background-image: url("https://i.imgur.com/GYRWFw9.jpeg");
+  background-image: url("https://i.imgur.com/0XnkkyE.jpeg");
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -94,6 +94,40 @@ button {
   float: none;
   display: table;
   border-radius: 25px;
+}
+
+/* Keep the source artwork from being enlarged and heavily cropped on phones. */
+@media only screen and (max-width: 40em) {
+  #outer {
+    background-attachment: fixed;
+    background-position: center top;
+    background-size: cover;
+  }
+
+  #header {
+    margin: 0 0.75em 1.5em;
+  }
+
+  #header .heading {
+    height: 9em;
+  }
+
+  #header h1.heading a::before {
+    width: 220px;
+    height: 116px;
+    background-size: 220px 116px;
+  }
+
+  #header ul.primary {
+    padding-top: 18px;
+    padding-bottom: 18px;
+    background-attachment: scroll;
+    background-position: center 30px;
+    background-size: cover;
+    width: 100%;
+
+    background-position: center center;
+  }
 }
 
 /* ---------- 3. Shared Aero button styling ---------- */
