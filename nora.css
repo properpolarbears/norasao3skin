@@ -23,7 +23,7 @@ button {
 }
 
 #outer {
-  background-image: url("https://i.imgur.com/0XnkkyE.jpeg");
+  background-image: url("https://i.imgur.com/d7mxND3.jpeg");
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -554,7 +554,12 @@ li.blurb .tags {
   overflow: visible;
 }
 
-.chapter .userstuff {
+#workskin .userstuff {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+
   background: linear-gradient(to bottom, #D9F0F8D9 0%, #B9D6E4F2 100%);
   box-shadow:
     0 2px 4px rgba(255,255,255,0.6) inset,
@@ -564,6 +569,34 @@ li.blurb .tags {
   border-radius: 12px;
   color: hsla(200,25%,20%,0.9);
   padding: 1.5em;
+}
+
+/* ---------- 8. Tag-triggered indicator replacement ---------- */
+
+li.blurb:has(.tags a[href*="/tags/Kid%20Fic"]) {
+  position: relative;
+}
+
+li.blurb:has(.tags a[href*="/tags/Kid%20Fic"]) .required-tags {
+  position: relative;
+  height: 50px;
+}
+
+li.blurb:has(.tags a[href*="/tags/Kid%20Fic"]) .required-tags > li {
+  display: none;
+}
+
+li.blurb:has(.tags a[href*="/tags/Kid%20Fic"]) .required-tags::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url("https://i.imgur.com/4Fh1Gt1.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 /* ---------- 8. Optional experiments and future additions ---------- */
@@ -595,10 +628,5 @@ li.blurb .tags {
  */
 
  /* TODO
- - image border
  - remove white on the bookmarks background
- - footer image should match header image
- - anything with kid fic gets silly jax?
- - maybe some other cute bordering
- - 
   */
